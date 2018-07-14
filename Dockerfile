@@ -10,13 +10,16 @@ USER tor
 ENTRYPOINT [ "tor" ]
 CMD [ "-f", "/etc/tor/torrc.default" ]
 
-RUN git clone github.com/SeanIsGay,git
+RUN git clone https://github.com/michael6as/OnionSpider.git
 
 FROM       python
 RUN        pip install pipenv
-COPY       . /app
+COPY       dockerfiles/docker /app
 WORKDIR    /app
+RUN        pip3 install -r requirements.txt
+RUN        pip3 install -e .
+RUN        make clean
 RUN        pipenv install --deploy --dev
 ENV        SHELL=/bin/bash
 ENTRYPOINT ["pipenv", "run"]
-CMD ["python OnionSpider/main.py"]
+CMD ["","python OnionSpider/main.py"]
