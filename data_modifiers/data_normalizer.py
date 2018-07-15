@@ -2,8 +2,6 @@ import datetime
 
 from abc import ABC, abstractmethod
 
-import datetime2
-
 
 class DataModifier(ABC):
 
