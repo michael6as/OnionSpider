@@ -1,5 +1,6 @@
 urllib3==1.22
 tinydb==3.9.0.post1
 dataclasses==0.6
-requests==2.18.4
+requests==2.11.1
+pysocks==1.6.8
 typing==3.6.4
