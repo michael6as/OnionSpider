@@ -50,6 +50,7 @@ class Http_Provider:
             return self.http_session.get(url, timeout=5000)
         except ProtocolError as e:
             proxies = self.http_session.proxies
+            self.http_session.close()
             self.http_session = requests.session()
             self.http_session.proxies = proxies
             return self.get_http(url)

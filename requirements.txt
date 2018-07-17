@@ -8,6 +8,8 @@ colorama==0.3.7
 constantly==15.1.0
 cryptography==2.1.4
 dataclasses==0.6
+requests==2.11.1
+pysocks==1.6.8
 enum34==1.1.6
 hyperlink==17.3.1
 idna==2.6
@@ -38,3 +40,4 @@ typing==3.6.4
 urllib3==1.22
 yolk==0.4.3
 zope.interface==4.3.2
+pysocks==1.6.8
