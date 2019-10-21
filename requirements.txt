@@ -1,4 +1,4 @@
-urllib3==1.22
+urllib3==1.24.2
 tinydb==3.9.0.post1
 dataclasses==0.6
 requests==2.11.1
